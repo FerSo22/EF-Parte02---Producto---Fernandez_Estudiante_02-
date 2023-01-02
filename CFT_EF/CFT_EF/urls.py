@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ProyectoWeb.views import index, saludo, integrantes
+from ProyectoWeb.views import index, saludo, integrantes, crear_producto, crear_curso
 
 urlpatterns = [
     path('', index, name="inicio"),
     path('inicio/', index, name="inicio"),
     path('saludo/', saludo, name="saludo"),
     path('integrantes/', integrantes, name="integrantes"),
+    path('crear-producto/', crear_producto, name="crear_producto"),
+    path('crear-curso/', crear_curso, name="crear_curso"),
 ]
