@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[EF - LPIII]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="main-header__container">
+                <h1 class="main-header__tittle"><a href="{% url 'inicio' %}" style="text-decoration: none; color: black">EF - LPIII</a> </h1>
+                <span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="{% url 'saludo' %}" class="menu__link">SALUDO</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="{% url 'integrantes' %}" class="menu__link">INTEGRANTES</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">CREAR PRODUCTOS</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">CREAR CURSOS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-header__container">
+                <div class="main-header__logo">
+                    <img src="{% static 'images/logo_untels.png' %}" class="main-header__logo">
+                </div>
+            </div>
+            <div class="main-header__container">
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="contenido">
+        <div class="box">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer__section" id="footer__section-about">
+            <h2 class="footer__tittle">Sobre nosotros</h2>
+            <p class="footer__txt">Somos estudiantes de sexto ciclo del curso de LPIII de la carrera profesional de Ingeniería de Sistemas, realizamos el presente aplicativo para la evaluación del examen final</p>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__tittle">Integrantes</h2>
+            <p class="footer__txt">Casas Parisaca Diego</p>
+            <p class="footer__txt">Correo: 20a3010137@untels.edu.pe</p>
+            <p class="footer__txt">Fernandez Sotelo Paolo Jeanpier</p>
+            <p class="footer__txt">Correo: 20a3010137@untels.edu.pe</p>
+            <p class="footer__txt">Tomasto Hurtado Johan Jesus</p>
+            <p class="footer__txt">Correo: 20a3010137@untels.edu.pe</p>
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__tittle">Nuestra casa de estudios</h2>
+            <p class="footer__txt"><strong>MISIÓN</strong></p>
+            <p class="footer__txt">Formar profesionales, investigadores e innovadores, con base humanista, ética, social, tecnológica y científica. Que participen en la solución de los problemas de la sociedad, con un enfoque de desarrollo sostenible, vocación de servicio y espíritu emprendedor.</p>
+           
+        </div>
+        <div class="footer__section">
+            <h2 class="footer__tittle">Docente</h2>
+            <p class="footer__txt">Mg. Flor Elizabeth Cerdán León</p>
+        </div>
+        <p class="copy">&copy 2022 [Untels]. All Rights Reserved | Design by [Casas, Fernandez y Tomasto]</p>
+    </footer>
+
+    <script src="../static/js/slider.js"></script>
+</body>
+</html>

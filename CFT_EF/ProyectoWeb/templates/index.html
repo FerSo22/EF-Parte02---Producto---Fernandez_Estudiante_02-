@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{Titulo}}
+{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="container-slider">
+        <div class="slider" id="slider">
+            <div class="slider__section">
+                <img src="{% static 'images/slider/slider 1.jpg' %}" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="{% static 'images/slider/slider 2.jpg' %}" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="{% static 'images/slider/slider 3.jpg' %}" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="{% static 'images/slider/slider 4.jpg' %}" alt="" class="slider__img">
+            </div>
+        </div>
+        <div class="slider__btn slider__btn--right" id="btn-right">&#62</div>
+        <div class="slider__btn slider__btn--left" id="btn-left">&#60</div>
+    </div>
+
+    <main class="main">
+        <div class="container">        
+            <div class="container-editor">
+                <div class="editor__item">
+                    <img src="{% static 'images/Cursos.jpg' %}" alt="" class="editor__img">
+                    <p class="editor__circle">CURSOS</p>
+                </div>
+                <div class="editor__item">
+                    <img src="{% static 'images/Carreras.png' %}" alt="" class="editor__img">
+                    <p class="editor__circle">CARRERAS</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
